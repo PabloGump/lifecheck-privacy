@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LifeCheck Privacy Policy — how we collect, use, and protect your personal information." />
+  <title>Privacy Policy — LifeCheck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:       #4F7EF7;
+      --brand-light: #EBF0FF;
+      --accent:      #22C87A;
+      --warn:        #FF6B6B;
+      --text:        #1A1A2E;
+      --muted:       #6B7280;
+      --border:      #E5E7EB;
+      --bg:          #FFFFFF;
+      --surface:     #F9FAFB;
+      --radius:      10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: linear-gradient(135deg, #4F7EF7 0%, #6C63FF 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .site-header .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .site-header .logo-icon {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .site-header .app-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    .site-header h1 {
+      font-size: clamp(26px, 5vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+    .site-header p {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .effective-badge {
+      display: inline-block;
+      margin-top: 18px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Table of Contents ── */
+    .toc-wrapper {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin: 40px 0;
+    }
+    .toc-wrapper h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 4px 20px;
+    }
+    .toc-list li { counter-increment: toc; }
+    .toc-list a {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--brand);
+      font-size: 14.5px;
+      font-weight: 500;
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+    .toc-list a:hover { color: #2D5EE0; text-decoration: underline; }
+    .toc-list a::before {
+      content: counter(toc) ".";
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      min-width: 18px;
+    }
+
+    /* ── Sections ── */
+    main { padding: 0 0 80px; }
+
+    section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 22px 0 8px;
+    }
+
+    p { margin-bottom: 14px; color: #374151; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+      color: #374151;
+    }
+    li { margin-bottom: 6px; }
+
+    strong { font-weight: 600; color: var(--text); }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Callout boxes ── */
+    .callout {
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin: 20px 0;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .callout .callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+    .callout-title { font-weight: 600; font-size: 14.5px; margin-bottom: 4px; }
+    .callout p { margin-bottom: 0; font-size: 14.5px; line-height: 1.65; }
+
+    .callout-blue  { background: #EBF0FF; border-left: 3px solid var(--brand); }
+    .callout-green { background: #ECFDF5; border-left: 3px solid var(--accent); }
+    .callout-red   { background: #FFF1F1; border-left: 3px solid var(--warn); }
+    .callout-yellow { background: #FFFBEB; border-left: 3px solid #F59E0B; }
+
+    .callout-blue .callout-title  { color: #1D3FAE; }
+    .callout-green .callout-title { color: #047857; }
+    .callout-red .callout-title   { color: #B91C1C; }
+    .callout-yellow .callout-title { color: #92400E; }
+
+    /* ── Data table ── */
+    .data-table-wrapper { overflow-x: auto; margin: 20px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    thead th {
+      background: var(--surface);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+      border-bottom: 2px solid var(--border);
+    }
+    tbody td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: #374151;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: #FAFBFF; }
+    td .tag {
+      display: inline-block;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    td .tag.green { background: #ECFDF5; color: #047857; }
+    td .tag.gray  { background: #F3F4F6; color: #6B7280; }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .right-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .right-card .right-icon { font-size: 22px; margin-bottom: 10px; }
+    .right-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .right-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 0; line-height: 1.55; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, #F0F4FF 0%, #F5F0FF 100%);
+      border: 1px solid #D4DEFF;
+      border-radius: 14px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .contact-card p { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 20px; }
+    .contact-email {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .contact-email:hover { background: #2D5EE0; text-decoration: none; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .toc-list { grid-template-columns: 1fr; }
+      section h2 { font-size: 19px; }
+      .rights-grid { grid-template-columns: 1fr 1fr; }
+      .contact-card { padding: 24px 18px; }
+    }
+    @media (max-width: 400px) {
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header class="site-header">
+  <div class="logo">
+    <div class="logo-icon">💚</div>
+    <span class="app-name">LifeCheck</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p>We're committed to protecting your personal information and being transparent about how we use it.</p>
+  <div class="effective-badge">Effective Date: April 16, 2026</div>
+</header>
+
+<!-- ═══════════════════════════ MAIN ═══════════════════════════ -->
+<main>
+<div class="container">
+
+  <!-- Table of Contents -->
+  <nav class="toc-wrapper" aria-label="Table of Contents">
+    <h2>Contents</h2>
+    <ol class="toc-list">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#information-we-collect">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#healthkit">HealthKit Data</a></li>
+      <li><a href="#data-sharing">Data Sharing</a></li>
+      <li><a href="#data-retention">Data Retention &amp; Deletion</a></li>
+      <li><a href="#your-rights">Your Rights (GDPR / CCPA)</a></li>
+      <li><a href="#childrens-privacy">Children's Privacy</a></li>
+      <li><a href="#policy-changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- ── 1. Introduction ── -->
+  <section id="introduction">
+    <h2><span class="section-num">1</span> Introduction</h2>
+    <p>
+      Welcome to <strong>LifeCheck</strong> ("we," "our," or "us"), a health and productivity app developed and operated by <strong>Gabe</strong>, an independent iOS developer. LifeCheck is available for iPhone and iPad on the Apple App Store.
+    </p>
+    <p>
+      This Privacy Policy explains what personal information we collect when you use LifeCheck, how we use it, with whom we share it, and the rights you have regarding your data. By downloading or using LifeCheck, you agree to the practices described in this policy.
+    </p>
+    <div class="callout callout-blue">
+      <span class="callout-icon">ℹ️</span>
+      <div>
+        <div class="callout-title">Plain-Language Summary</div>
+        <p>We collect only what we need to make the app work. We do not sell your personal data. Health data from Apple HealthKit is never shared with third parties and is never used for advertising. You can delete your account and all associated data at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2. Information We Collect ── -->
+  <section id="information-we-collect">
+    <h2><span class="section-num">2</span> Information We Collect</h2>
+    <p>We collect several categories of information, each for specific purposes described below.</p>
+
+    <div class="data-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Data Collected</th>
+            <th>Storage</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Account Data</strong></td>
+            <td>Email address, hashed password</td>
+            <td><span class="tag">Cloud</span></td>
+            <td>Authentication and account management via Firebase</td>
+          </tr>
+          <tr>
+            <td><strong>User Content</strong></td>
+            <td>Tasks, habits, goals, notes, life events you create</td>
+            <td><span class="tag">Cloud</span></td>
+            <td>Core app functionality; stored in Firestore under your account</td>
+          </tr>
+          <tr>
+            <td><strong>Health Data</strong></td>
+            <td>Steps, workouts, sleep, heart rate (read-only from HealthKit)</td>
+            <td><span class="tag green">On-Device</span></td>
+            <td>Display your health summary within the app; never uploaded</td>
+          </tr>
+          <tr>
+            <td><strong>Social Data</strong></td>
+            <td>Friend connections, challenge participation, in-app messages</td>
+            <td><span class="tag">Cloud</span></td>
+            <td>Social features and shared challenges</td>
+          </tr>
+          <tr>
+            <td><strong>Push Notification Token</strong></td>
+            <td>Device push token issued by APNs / Expo</td>
+            <td><span class="tag">Cloud</span></td>
+            <td>Delivering notifications you have opted into</td>
+          </tr>
+          <tr>
+            <td><strong>Subscription Status</strong></td>
+            <td>Active/inactive subscriber flag, purchase entitlements</td>
+            <td><span class="tag">Cloud</span></td>
+            <td>Unlocking premium features via RevenueCat</td>
+          </tr>
+          <tr>
+            <td><strong>Local Preferences</strong></td>
+            <td>Dark mode preference, notification settings</td>
+            <td><span class="tag green">On-Device</span></td>
+            <td>Persisting your UI choices; never transmitted to any server</td>
+          </tr>
+          <tr>
+            <td><strong>Usage &amp; Crash Data</strong> <em>(conditional)</em></td>
+            <td>App events, crash logs, performance metrics</td>
+            <td><span class="tag gray">Conditional</span></td>
+            <td>Improving app stability via Firebase Analytics / Crashlytics, if enabled</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout-yellow">
+      <span class="callout-icon">📊</span>
+      <div>
+        <div class="callout-title">Usage &amp; Crash Data Note</div>
+        <p>Firebase Analytics and Crashlytics may or may not be active in the version of LifeCheck you are using. If enabled, these services collect anonymized usage events and crash reports. We will update this policy to reflect whether these features are active.</p>
+      </div>
+    </div>
+
+    <h3>Information We Do <em>Not</em> Collect</h3>
+    <ul>
+      <li>We do not collect your precise GPS location.</li>
+      <li>We do not access your camera, microphone, or photo library.</li>
+      <li>We do not collect payment card or bank details (all purchases are handled entirely by Apple's App Store and RevenueCat).</li>
+      <li>We do not build advertising profiles or track you across third-party apps or websites.</li>
+    </ul>
+  </section>
+
+  <!-- ── 3. How We Use Your Information ── -->
+  <section id="how-we-use">
+    <h2><span class="section-num">3</span> How We Use Your Information</h2>
+    <p>We use the information we collect solely to provide, maintain, and improve LifeCheck. Specifically:</p>
+
+    <h3>Core App Functionality</h3>
+    <ul>
+      <li>Creating and managing your account with Firebase Authentication.</li>
+      <li>Storing and syncing your tasks, habits, goals, notes, and life events across your devices via Firestore.</li>
+      <li>Displaying health insights (steps, sleep, etc.) pulled from Apple HealthKit on your device.</li>
+      <li>Enabling social features such as friend lists, challenges, and in-app messaging.</li>
+    </ul>
+
+    <h3>Notifications</h3>
+    <ul>
+      <li>Sending habit reminders, goal nudges, and social notifications you have opted into.</li>
+      <li>Your device push token is used only to route notifications to your device and is not used for any other purpose.</li>
+    </ul>
+
+    <h3>Subscriptions</h3>
+    <ul>
+      <li>Verifying your subscription status through RevenueCat to unlock premium features.</li>
+      <li>We receive only your subscription entitlement status — we do not receive your payment card or billing details.</li>
+    </ul>
+
+    <h3>App Improvement (if analytics are enabled)</h3>
+    <ul>
+      <li>Understanding which features are used most frequently to prioritize improvements.</li>
+      <li>Diagnosing crashes and performance issues to improve stability.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-icon">✅</span>
+      <div>
+        <div class="callout-title">We Do Not Use Your Data For</div>
+        <p>Advertising, selling to data brokers, profiling for marketing purposes, training machine learning models, or any purpose unrelated to providing LifeCheck functionality to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. HealthKit Data ── -->
+  <section id="healthkit">
+    <h2><span class="section-num">4</span> HealthKit Data</h2>
+
+    <div class="callout callout-red">
+      <span class="callout-icon">🛡️</span>
+      <div>
+        <div class="callout-title">Apple HealthKit — Strict Data Protections Apply</div>
+        <p>LifeCheck reads health data from Apple HealthKit solely to display your personal health summary within the app. <strong>HealthKit data is never shared with any third party, is never uploaded to any server, and is never used for advertising, marketing, or any purpose unrelated to providing health features directly to you.</strong></p>
+      </div>
+    </div>
+
+    <p>Specifically, regarding Apple HealthKit data:</p>
+    <ul>
+      <li><strong>Read-only access.</strong> LifeCheck requests permission to read — never to write — health data types including step count, workout sessions, sleep analysis, and heart rate.</li>
+      <li><strong>Stays on your device.</strong> Health data read from HealthKit is processed entirely on-device and is never transmitted to Firebase, RevenueCat, Expo, or any other service.</li>
+      <li><strong>Never used for advertising.</strong> HealthKit data will not be used for advertising, marketing, or advertising networks of any kind.</li>
+      <li><strong>Never sold.</strong> HealthKit data is never sold or disclosed for any commercial purpose.</li>
+      <li><strong>Permission is optional.</strong> You may deny or revoke HealthKit access at any time via iOS Settings → Privacy &amp; Security → Health → LifeCheck. Core app features (tasks, habits, goals) remain fully functional without health access.</li>
+      <li><strong>Compliance with Apple guidelines.</strong> Our use of HealthKit data complies with Apple's HealthKit framework requirements and the App Store Review Guidelines.</li>
+    </ul>
+  </section>
+
+  <!-- ── 5. Data Sharing ── -->
+  <section id="data-sharing">
+    <h2><span class="section-num">5</span> Data Sharing</h2>
+    <p>
+      We do not sell, rent, or trade your personal information. We share data only with the service providers listed below, and only to the extent necessary for them to perform services on our behalf.
+    </p>
+
+    <div class="data-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Service Provider</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+            <th>Privacy Policy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Firebase</strong></td>
+            <td>Authentication, database (Firestore), cloud storage, analytics / crash reporting (conditional)</td>
+            <td>Email, user content, social data, push token, usage data</td>
+            <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>RevenueCat</strong></td>
+            <td>Subscription management and purchase validation</td>
+            <td>Subscription status, App Store receipt data</td>
+            <td><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">revenuecat.com/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Expo / Expo Notifications</strong></td>
+            <td>Push notification delivery infrastructure</td>
+            <td>Device push token</td>
+            <td><a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>Apple HealthKit</strong></td>
+            <td>Reading health data from the device</td>
+            <td>No data is shared with Apple beyond what HealthKit normally manages on your device</td>
+            <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Other Disclosure Circumstances</h3>
+    <p>We may disclose your information in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Legal compliance.</strong> If required by applicable law, regulation, court order, or legal process, we may disclose information as necessary.</li>
+      <li><strong>Safety.</strong> If we believe in good faith that disclosure is necessary to protect the rights, property, or safety of LifeCheck, our users, or the public.</li>
+      <li><strong>Business transfer.</strong> If LifeCheck is acquired by or merged with another entity, your data may be transferred as part of that transaction. We will notify you beforehand via in-app notice or email.</li>
+    </ul>
+
+    <div class="callout callout-green">
+      <span class="callout-icon">🚫</span>
+      <div>
+        <div class="callout-title">We Do Not Sell Personal Data</div>
+        <p>We do not sell, rent, or monetize your personal information to any third party for their own commercial purposes. This applies to all users, including California residents covered by the CCPA.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. Data Retention & Deletion ── -->
+  <section id="data-retention">
+    <h2><span class="section-num">6</span> Data Retention &amp; Deletion</h2>
+
+    <h3>How Long We Retain Your Data</h3>
+    <p>
+      We retain your account data and user-generated content for as long as your account is active. Push notification tokens are refreshed and may be updated by iOS periodically. Usage and crash data (if collected) is retained according to Firebase's default retention periods, typically 14 months.
+    </p>
+    <p>
+      Local preferences stored via AsyncStorage remain on your device until you delete the app or clear app data in iOS Settings. This data is never uploaded and is unaffected by account deletion.
+    </p>
+
+    <h3>Deleting Your Account &amp; Data</h3>
+    <p>You have the right to delete your account and all associated data. You can request this by:</p>
+    <ul>
+      <li><strong>In-app deletion</strong> (if available): Navigate to Settings → Account → Delete Account within LifeCheck.</li>
+      <li><strong>Email request:</strong> Send an account deletion request to <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a> from the email address associated with your account.</li>
+    </ul>
+    <p>
+      Upon receiving a verified deletion request, we will delete your account, email address, all user-generated content (tasks, habits, goals, notes, life events), social connections, messages, and push notification token from our systems within <strong>30 days</strong>, except where retention is required by law or for legitimate business purposes (such as preventing fraud).
+    </p>
+    <p>
+      Please note: deleting your account within the app does not cancel an active subscription. To manage or cancel your subscription, go to iPhone Settings → Your Name → Subscriptions.
+    </p>
+  </section>
+
+  <!-- ── 7. Your Rights ── -->
+  <section id="your-rights">
+    <h2><span class="section-num">7</span> Your Rights (GDPR / CCPA)</h2>
+    <p>
+      Depending on where you live, you may have specific rights regarding your personal data. We are committed to honoring these rights regardless of your location.
+    </p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="right-icon">🔍</div>
+        <h4>Right to Access</h4>
+        <p>Request a copy of the personal data we hold about you.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">✏️</div>
+        <h4>Right to Rectification</h4>
+        <p>Request that we correct inaccurate or incomplete data.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">🗑️</div>
+        <h4>Right to Erasure</h4>
+        <p>Request deletion of your personal data ("right to be forgotten").</p>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">⛔</div>
+        <h4>Right to Object</h4>
+        <p>Object to certain processing of your personal data.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">📦</div>
+        <h4>Right to Portability</h4>
+        <p>Receive your data in a structured, machine-readable format.</p>
+      </div>
+      <div class="right-card">
+        <div class="right-icon">⏸️</div>
+        <h4>Right to Restriction</h4>
+        <p>Request that we restrict how we process your data in certain circumstances.</p>
+      </div>
+    </div>
+
+    <h3>GDPR (European Economic Area, UK, Switzerland)</h3>
+    <p>
+      If you are located in the EEA, UK, or Switzerland, you have rights under the General Data Protection Regulation (GDPR) or equivalent legislation. Our legal basis for processing your personal data is:
+    </p>
+    <ul>
+      <li><strong>Contract performance</strong> — processing necessary to provide the LifeCheck service you have signed up for (account data, user content, social features, push notifications, subscriptions).</li>
+      <li><strong>Legitimate interests</strong> — app stability and improvement (crash and usage analytics, if enabled), fraud prevention, and ensuring security.</li>
+      <li><strong>Consent</strong> — HealthKit access and push notifications, which you grant explicitly via iOS permission prompts.</li>
+    </ul>
+    <p>
+      You may exercise your GDPR rights by contacting us at <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.
+    </p>
+
+    <h3>CCPA (California Residents)</h3>
+    <p>
+      If you are a California resident, the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA) grant you additional rights, including:
+    </p>
+    <ul>
+      <li>The right to know what personal information we collect, use, disclose, and sell.</li>
+      <li>The right to delete personal information we hold about you.</li>
+      <li>The right to opt out of the sale or sharing of personal information — <strong>we do not sell or share personal information</strong>, so no opt-out is needed.</li>
+      <li>The right to non-discrimination for exercising your CCPA rights.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, contact us at <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a>. We will verify your identity before fulfilling a request and respond within 45 days as required by California law.
+    </p>
+
+    <h3>How to Exercise Your Rights</h3>
+    <p>
+      To submit any privacy rights request — access, correction, deletion, portability, or objection — please email <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a> with the subject line <strong>"Privacy Request"</strong> and include the email address associated with your LifeCheck account. We will respond within 30 days (or 45 days for CCPA requests).
+    </p>
+  </section>
+
+  <!-- ── 8. Children's Privacy ── -->
+  <section id="childrens-privacy">
+    <h2><span class="section-num">8</span> Children's Privacy</h2>
+    <p>
+      LifeCheck is not directed to children under the age of 13, and we do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided personal information through LifeCheck, please contact us immediately at <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a> and we will delete that information promptly.
+    </p>
+    <p>
+      If you are located in the European Economic Area, we do not knowingly collect personal data from anyone under the age of 16 without verifiable parental consent.
+    </p>
+  </section>
+
+  <!-- ── 9. Changes to This Policy ── -->
+  <section id="policy-changes">
+    <h2><span class="section-num">9</span> Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in our practices, the app's features, or legal requirements. When we make material changes, we will notify you by:
+    </p>
+    <ul>
+      <li>Updating the "Effective Date" at the top of this page, and/or</li>
+      <li>Sending an in-app notification or email to the address associated with your account.</li>
+    </ul>
+    <p>
+      We encourage you to review this policy periodically. Your continued use of LifeCheck after any changes take effect constitutes your acceptance of the revised policy.
+    </p>
+    <p>
+      The most current version of this Privacy Policy is always available at the URL linked from the LifeCheck App Store listing.
+    </p>
+  </section>
+
+  <!-- ── 10. Contact ── -->
+  <section id="contact">
+    <h2><span class="section-num">10</span> Contact Us</h2>
+    <p>
+      If you have any questions, concerns, or requests related to this Privacy Policy or your personal data, please reach out. We are an independent developer and will do our best to respond promptly.
+    </p>
+    <div class="contact-card">
+      <h3>Get in Touch</h3>
+      <p>For privacy inquiries, data requests, or account deletion — email us and we'll respond within 30 days.</p>
+      <a href="mailto:gaakcardona@icloud.com" class="contact-email">gaakcardona@icloud.com</a>
+      <p style="margin-top:16px; font-size:13px; color:#6B7280;">
+        <strong>Developer:</strong> Gabe &nbsp;·&nbsp;
+        <strong>App:</strong> LifeCheck (iOS) &nbsp;·&nbsp;
+        <strong>Subject line:</strong> "Privacy Request"
+      </p>
+    </div>
+  </section>
+
+</div><!-- /container -->
+</main>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer>
+  <p>
+    &copy; 2026 LifeCheck by Gabe. All rights reserved.
+    &nbsp;·&nbsp;
+    <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a>
+    &nbsp;·&nbsp;
+    Effective April 16, 2026
+  </p>
+</footer>
+
+</body>
+</html>
