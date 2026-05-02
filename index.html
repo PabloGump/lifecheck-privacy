@@ -114,22 +114,43 @@
     }
     .logo-icon-wrap {
       width: 56px; height: 56px;
-      filter: drop-shadow(0 6px 20px rgba(245, 158, 11, 0.28))
-              drop-shadow(0 4px 14px rgba(22, 163, 74, 0.32));
       flex-shrink: 0;
+      /* Use box-shadow on a sibling glow layer instead of filter:
+         drop-shadow on the wrapper. drop-shadow rasterizes the
+         element to sample for the blur, which on some browsers
+         causes the icon itself to lose sharpness. The glow now
+         sits behind the image as a separate ::before pseudo-
+         element so the actual <img> is never re-rasterized. */
+      position: relative;
+      isolation: isolate;
     }
+    .logo-icon-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 14px;
+      background: transparent;
+      box-shadow:
+        0 6px 20px rgba(245, 158, 11, 0.28),
+        0 4px 14px rgba(22, 163, 74, 0.32);
+      z-index: -1;
+    }
+    /* The footer mark doesn't need the glow at 32px — looks heavier
+       than the wordmark next to it. Override here. */
+    footer .footer-mark .logo-icon-wrap::before { display: none; }
     /* Using a rasterized 2048×2048 PNG (downloaded from icon@4x.png)
        displayed at 56px gives bulletproof crispness on retina + sub-pixel
-       displays. Some browsers introduce subtle aliasing on inline SVG
-       gradients with round line caps; the PNG is rendered once via
-       resvg-js (Mozilla's libresvg) at full master resolution and never
-       re-rasterized client-side. */
+       displays. NO image-rendering hint — the default ("auto") uses
+       browser-native bilinear/bicubic downscaling which is correct
+       for smooth gradient content. `crisp-edges` was here briefly but
+       forces nearest-neighbor scaling (designed for pixel art) which
+       makes the squircle edges and gradient look chunky.
+       The PNG is rendered once via resvg-js (Mozilla's libresvg) at
+       full master resolution and never re-rasterized client-side. */
     .logo-icon-wrap .app-icon {
       width: 100%;
       height: 100%;
       display: block;
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
     }
 
     /* The wordmark — matches src/components/Wordmark.js. Two-tone, Plus Jakarta 700,
