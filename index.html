@@ -485,7 +485,7 @@
       background: linear-gradient(135deg, #16A34A 0%, #0A2E1A 100%);
       color: #fff;
       border-radius: 20px;
-      padding: 40px 32px;
+      padding: 36px 32px;
       text-align: center;
       margin-top: 24px;
       box-shadow: 0 12px 40px rgba(22, 163, 74, 0.25);
@@ -499,19 +499,12 @@
       background: radial-gradient(circle at 100% 0%, rgba(245, 158, 11, 0.18), transparent 50%);
       pointer-events: none;
     }
-    .contact-card-inner { position: relative; z-index: 1; }
-    .contact-card .contact-icon {
-      width: 56px; height: 56px;
-      margin: 0 auto 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.16);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+    .contact-card-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 460px;
+      margin: 0 auto;
     }
-    .contact-card .contact-icon .ms { color: #fff; font-size: 28px; }
     /* The contact card uses a static green gradient in BOTH themes,
        so all text inside it must stay white regardless of the
        prefers-color-scheme inversion of the global tokens. */
@@ -552,10 +545,12 @@
     .contact-email:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,0.24); text-decoration: none; color: #0A2E1A; }
     .contact-email .ms { color: #16A34A; font-size: 18px; }
     .contact-meta {
-      margin-top: 20px;
-      font-size: 13px;
-      color: rgba(255,255,255,0.6);
+      margin-top: 18px;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.2px;
     }
+    .contact-meta strong { color: rgba(255,255,255,0.78); font-weight: 600; }
 
     /* ─────────────── Footer ─────────────── */
     footer {
@@ -648,7 +643,7 @@
   <section id="introduction">
     <h2><span class="section-num">1</span> Introduction</h2>
     <p>
-      Welcome to <strong>LifeCheck</strong> ("we," "our," or "us"), a health and productivity app developed and operated by <strong>Gabe</strong>, an independent iOS developer. LifeCheck is available for iPhone and iPad on the Apple App Store.
+      Welcome to <strong>LifeCheck</strong> ("we," "our," or "us"), a health and productivity app for iPhone and iPad available on the Apple App Store. LifeCheck is built and operated by an independent developer.
     </p>
     <p>
       This Privacy Policy explains what personal information we collect when you use LifeCheck, how we use it, with whom we share it, and the rights you have regarding your data. By downloading or using LifeCheck, you agree to the practices described in this policy.
@@ -1021,7 +1016,6 @@
     </p>
     <div class="contact-card">
       <div class="contact-card-inner">
-        <div class="contact-icon"><span class="ms">mail</span></div>
         <h3>Get in touch</h3>
         <p>For privacy inquiries, data requests, or account deletion — email us and we'll respond within 30 days.</p>
         <a href="mailto:gaakcardona@icloud.com" class="contact-email">
@@ -1029,8 +1023,6 @@
           gaakcardona@icloud.com
         </a>
         <p class="contact-meta">
-          <strong>Developer:</strong> Gabe &nbsp;·&nbsp;
-          <strong>App:</strong> LifeCheck (iOS) &nbsp;·&nbsp;
           <strong>Subject line:</strong> "Privacy Request"
         </p>
       </div>
@@ -1055,7 +1047,7 @@
     </span>
   </div>
   <p>
-    &copy; 2026 LifeCheck by Gabe. All rights reserved.
+    &copy; 2026 LifeCheck. All rights reserved.
     &nbsp;·&nbsp;
     <a href="mailto:gaakcardona@icloud.com">gaakcardona@icloud.com</a>
     &nbsp;·&nbsp;
